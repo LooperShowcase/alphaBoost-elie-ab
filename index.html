@@ -8,10 +8,21 @@
     <ul>
       <li><a class="active" href="index.html">Home</a></li>
       <li><a href="products.html">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="signup.html">signup</a></li>
+      <li><a href="about.html">about</a></li>
+      <li style="float: right">
+        <input id="alwan" onchange="CBD()" type="color" />
+      </li>
+      <li style="float: right">
+        <img
+          id="pl"
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+          height="50"
+        />
+      </li>
     </ul>
     <center>
+      <input id="cpp" onchange="cmypp()" type="file" />
       <button type="button" onclick="magic()">magic</button>
       <button type="button" onclick="darkM()">dark mode</button>
       <h1 id="tile">microsoft</h1>
@@ -19,12 +30,6 @@
         src="https://pbs.twimg.com/profile_images/1454912483248930822/_hO4WPRC_400x400.png"
       />
     </center>
-    <form>
-      <label>first name</label> <br />
-      <input type="text" /><br />
-      <label>last name</label> <br />
-      <input type="text" /><br />
-    </form>
     <p>
       Microsoft Corporation is an American multinational technology corporation
       which produces computer software, consumer electronics, personal
@@ -94,7 +99,8 @@
     <ol>
       <li>Microsoft Windows</li>
       <br />
-      <img id="pic"
+      <img
+        id="pic"
         src="https://images.idgesg.net/images/article/2021/03/microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.jpg?auto=webp&quality=85,70"
         width="250px"
       />
@@ -119,10 +125,11 @@
         document.getElementById("tile").style.color = "black";
       }
       function darkM() {
-        document.body.style.background="aqua";
+        document.body.style.background = "gray";
       }
-      function pic() {
-document.getElementById("pic").src=
+      function cmypp() {
+        var newPic = document.getElementById("cpp").files[0].name;
+        document.getElementById("pl").src = newPic;
       }
     </script>
   </body>

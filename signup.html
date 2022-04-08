@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>products</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a class="active" href="signup.html">signup</a></li>
+      <li><a href="about.html">about</a></li>
+      <li  style="float: right"><input id="alwan" onchange="CBD()" type="color" /> </li>
+      <li   style="float: right">
+        <img id="pl"
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+          height="50"
+       
+        />
+      </li>
+    </ul>
+    <center>
+    <input id="cpp" onchange="cmypp()" type="file" />
+  </center>
+    <form>
+        <center>
+        <label>first name</label> <br />
+        <input type="text" /><br />
+        <label>last name</label> <br />
+        <input type="text" /><br />
+        
+        
+      </form>
+      <button type="button" onclick="submit()">submit</button> <br>
+    </center>
+    <script>
+      function magic() {
+        document.getElementById("tile").style.color = "black";
+      }
+      function darkM() {
+        document.body.style.background = "gray";
+      }
+      function cmypp() {
+        var newPic = document.getElementById("cpp").files[0].name;
+        document.getElementById("pl").src = newPic;
+      }
+    </script>
+  </body>
+</html>
